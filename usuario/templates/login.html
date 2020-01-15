@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block body %}
 {{msg}}
-<h1>Login</h1>
-< method="POST" action="/login">
-  <input type="email" name="email" placeholder="E-mail">
-  <input type="submit" value="Consultar">
-</>
-{% endblock %}
+<section class="container">
+    <h2>Login</h2>
+    <form action='.'method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Cadastrar Dono</button>
+    </form>
+</section>
+{% endblock body%}

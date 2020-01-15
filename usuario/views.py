@@ -13,12 +13,12 @@ def mostrar_formulario_cadastro(request):
     pessoa.genero = request.POST.get('genero')
     pessoa.save
     return render(request, 'login.html')
-  return render(request, 'index.html', args)
+  return render(request, 'cadastrar_pessoa.html', args)
 
 
 def mostrar_pessoas(request):
   pessoas = Pessoa.objects
-
+  
   return render(request, 'pessoas.html', {'dados': pessoas})
 
 
