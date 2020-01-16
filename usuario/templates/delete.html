@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block body %}
+    <section class="container">
+        <h1>Delete usuario</h1>
+        {% if usuario %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Nome: {{usuario.nome}}</h5>
+                <p class="card-text">usuario deletado</p>
+            </div>
+        </div>
+        {% endif %}
+    </section>
+{% endblock body %}

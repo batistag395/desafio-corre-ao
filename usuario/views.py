@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -34,3 +35,13 @@ def login(request):
     return render(request, 'login.html', {'msg': 'Ops, não encontramos'})
 
   return render(request, 'login.html', {'msg': 'olá, bem vindo'})
+
+def delete(request):
+    usuario = Pessoa()
+
+    args = {
+        'usuario': usuario
+    }
+
+    usuario.delete()
+    return render(request, 'delete.html', args)  

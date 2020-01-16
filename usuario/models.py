@@ -10,9 +10,9 @@ class Pessoa(models.Model):
     ('O', 'Outros'),
   )
   nome = models.CharField(max_length=255, verbose_name='Nome')
-  cpf = models.CharField(max_length=255, verbose_name='CPF')
+  cpf = models.IntegerField()
   email = models.EmailField(max_length=255, verbose_name='E-mail')
-  telefone = models.CharField(max_length=255, verbose_name='Telefone')
+  telefone = models.IntegerField()
   genero = models.CharField(max_length=255, verbose_name='Gênero', choices=GENEROS  )
   ativo = models.BooleanField(default=True)
 
