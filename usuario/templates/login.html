@@ -5,8 +5,8 @@
     <h2>Login</h2>
     <form action='.'method="POST">
         {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Cadastrar Dono</button>
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="submit" value="Consultar">
     </form>
 </section>
 {% endblock body%}

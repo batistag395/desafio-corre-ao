@@ -4,6 +4,7 @@
 
 <h1>Criar Pessoa</h1>
 <form method="POST" action="/">
+  {% csrf_token %}
   <input type="text" name="nome" placeholder="Nome" required>
   <input type="text" name="cpf" placeholder="CPF">
   <input type="email" name="email" placeholder="E-mail">
@@ -12,6 +13,8 @@
   <select name="genero">
     <option value="M">Masculino</option>
     <option value="F">Feminino</option>
+    <option value="NB">Não binario</option>
+    <option value="N">Outros</option>
   </select>
   
   <input type="submit" value="Cadastrar">
