@@ -1,0 +1,12 @@
+{% extends "base-empresa.html" %}
+{% block body %}
+{{msg}}
+<section class="container">
+    <h2>Login</h2>
+    <form action='.'method="POST">
+        {% csrf_token %}
+        <input type="email" name="email" placeholder="E-mail">
+        <input type="submit" value="Consultar">
+    </form>
+</section>
+{% endblock body%}

@@ -1,0 +1,23 @@
+{% extends "base-empresa.html" %}
+{% block body%} 
+{{msg}}
+
+<h1>Criar Empresa</h1>
+<form method="POST" action="/">
+  {% csrf_token %}
+  <input type="text" name="cnpj" placeholder="CNPJ">
+  <input type="iNSCRIÇÃO" name="inscrição" placeholder="inscrição Municipal">
+  <input type="INCRIÇÃO1" name="Incrição1" placeholder="Incrição Estadual">
+  <label for="area">Area de atuação</label>
+  <select name="area">
+    <option value="H">Saúde</option>
+    <option value="T">Tecnologia</option>
+    <option value="E">Construção civil</option>
+    <option value="L">Logistica</option>
+    <option value="M">Metalurgica</option>
+    <option value="S">Segurança</option>
+  </select>
+  
+  <input type="submit" value="Cadastrar">
+</form>
+{% endblock body%}
