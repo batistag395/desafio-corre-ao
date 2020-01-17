@@ -17,9 +17,13 @@ def mostrar_formulario_cadastro(request):
 
 
 def mostrar_pessoas(request):
-  pessoas = Pessoa.objects
+  args = {'msg': ''}
+  if request == 'POST': 
+    pessoa = Pessoa()
+    pessoa.nome = request.POST.get('nome')
+    pessoa.cpf = request.POST.get('cpf')
   
-  return render(request, 'pessoas.html', {'dados': pessoas})
+  return render(request, 'pessoas.html', args)
 
 
 def login(request):
